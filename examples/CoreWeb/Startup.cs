@@ -72,9 +72,11 @@ namespace CoreWeb
 
             // Build types
             var pageTypeBuilder = new Piranha.AttributeBuilder.PageTypeBuilder(api)
-                .AddType(typeof(Models.MarkdownPage));
-            pageTypeBuilder.Build()
-                .DeleteOrphans();
+                .AddType(typeof(Models.MarkdownPage))
+                .AddType(typeof(Models.HtmlPage))
+                .AddType(typeof(Models.AboutPage))
+                .AddType(typeof(Models.HomePage));
+            pageTypeBuilder.Build();
 
             // Register middleware
             app.UseStaticFiles();

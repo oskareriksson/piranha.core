@@ -44,5 +44,38 @@ namespace CoreWeb.Controllers
                 return View("Start", model);
             return View(model);
         }
+
+        /// <summary>
+        /// Gets the page with the specified id.
+        /// </summary>
+        /// <param name="id">The unique id</param>
+        [Route("htmlpage")]
+        public IActionResult HtmlPage(string id) {
+            var model = api.Pages.GetById<Models.HtmlPage>(id);
+
+            return View(model);
+        }
+        
+        /// <summary>
+        /// Gets the page with the specified id.
+        /// </summary>
+        /// <param name="id">The unique id</param>
+        [Route("aboutpage")]
+        public IActionResult AboutPage(string id) {
+            var model = api.Pages.GetById<Models.AboutPage>(id);
+
+            return View(model);
+        }
+
+        /// <summary>
+        /// Gets the page with the specified id.
+        /// </summary>
+        /// <param name="id">The unique id</param>
+        [Route("homepage")]
+        public IActionResult HomePage(string id) {
+            var model = api.Pages.GetById<Models.HomePage>(id);
+
+            return View(model);
+        }
     }
 }

@@ -1,151 +1,170 @@
 ﻿@import "../lib/bootstrap/less/bootstrap.less";
 
-/*!
- * Copyright (c) 2016 Håkan Edling
- *
- * This software may be modified and distributed under the terms
- * of the MIT license.  See the LICENSE file for details.
- * 
- * https://github.com/piranhacms/piranha.core
- * 
- */
+/*Navbar*/
+.navbar {
+  margin: 0;
+  background-color: #0c1a1e;
+  border: none;
+  border-radius: 0;
 
-@import "mixins.less";
-@import "typography.less";
-@import "variables.less";
+  /*Navbar Header*/
+  .navbar-header {
 
-.container {
-    max-width: 730px;
+    /*Navbar Toggle Button*/
+    .navbar-toggle {
+      border-color: #fff;
+      float: left;
+      margin-left: 15px;
 
-    &.arrow {
-        &::before {
-            .arrow(#fff, 40px, -100px);
-        }
+      .icon-bar {
+        background-color: #fff;
+      }
+
+      &:hover {
+        background-color: rgba(0, 0, 0, 0.1);
+      }
     }
-}
+  }
 
-.banner {
-    background: url('../img/seigaiha-blue.jpg');
-    position: relative;
-    height: 30vh;
-    max-height: 900px;
-    min-height: 240px;
-    overflow: hidden;
-    margin-bottom: 25px;
+  /*Navbar First Dropdown Container*/
+  .navbar-collapse {
+    border: none;
+  }
 
-    &.startpage {
-        height: 60vh;
-    }
+  /*Navbar First UL Dropdown*/
+  .navbar-nav {
+    border: none;
+    padding: 0;
 
-    img {
-        position: absolute;
-        min-width: 100%;
-        top: 0;
-        right: 0;
-        bottom: 0;
-        margin: auto;
-    }
-
-    h1 {
+    li {
+      
+      a {
         color: #fff;
-        position: absolute;
-        width: 100%;
-        top: 50%;
-        margin-top: -15px;
-        text-align: center;
-        font-size: 50px;
+        -webkit-transition: background-color 0.2s;
+        transition: background-color 0.2s;
 
-        small {
+        &:hover, &:focus {
+          background-color: #6e6e6e;
+          color: orange;
+        }
+      }
+    }
+
+    /*Navbar Nested UL Dropdown*/
+    .dropdown {
+
+      .dropdown-toggle {
+
+        &:focus {
+          color: orange;
+          background-color: #6e6e6e;
+        }
+      }
+
+      .dropdown-menu {
+        background-color: #0c1a1e;
+
+        li {
+      
+          a {
             color: #fff;
-            font-family: 'Open Sans', sans-serif;
-            font-weight: 300;
-            font-size: 50%;
-            display: block;
-            margin-top: 10px;
-        }
-    }
-}
+            padding-left: 15px;
 
-//
-// Header & Navigation
-//
-.header {
-    position: absolute;
-    height: 76px;
-    width: 100%;
-    top: 0;
-    left: 0;
-    background: #222;
-    background: rgba(0,0,0,0.7);
-    z-index: 1000;
-
-    img {
-        margin: 10px 0 0;
-    }
-
-    nav {
-        ul {
-            margin-top: 18px;
-
-            li {
-                a {
-                    color: #eee;
-                    font-size: 15px;
-                    text-transform: uppercase;
-                    position: relative;
-
-                    &:hover {
-                        color: #fff;
-                        background: inherit;
-                    }
-                }
-
-                &.active {
-                    a {
-                        color: #fff;
-                        background: inherit;
-
-                        &:before {
-                            .arrow(#fff, 10px, 28px)
-                        }
-                        &:hover {
-                            background: inherit;
-                        }
-                    }
-                }
+            &:hover, &:focus {
+              background-color: #6e6e6e;
+              color: orange;
             }
+          }
         }
+      }
     }
-}
 
-//
-// Footer
-//
-footer {
-    .container {
-        color: #999;
-        padding: 30px 0 10px;
-        text-align: center;
-        text-transform: uppercase;
-        font-size: 13px;
+  }
+
+}
+/*--------------*/
+
+/*Footer*/
+.footer {
+  color: white;
+  background-color: #0c1a1e;
+  min-height: 350px;
+
+  /*General padding that pushes the content together*/
+  .address, .links, .posts, .socialmedia {
+    padding: 0 10%;
+  }
+  /*------------------*/
+
+  /*General margin between sections*/
+  .address, .links, .posts, .socialmedia {
+    margin-top: 20px;
+  }
+  /*------------------*/
+
+  /*General fontsize for address and posts*/
+  .address, .posts p {
+    font-size: 0.9em;
+  }
+  /*------------------*/
+
+  /*Links*/
+  .links {
+
+    h4 {
+      padding-top: 14px;
     }
-}
 
-@media (max-width: 767px) {
-    .banner {
-        h1 {
-            font-size: 44px;
+    ul {
+      list-style-type: none;
+      padding: 0;
+
+      li {
+        margin: 2px 0 0 0;
+
+        a {
+
+          &:hover {
+            text-decoration: none;
+            color: orange;
+          }
         }
+      }
     }
-}
-@media (max-width: 420px) {
-    .banner {
-        h1 {
-            font-size: 34px;
+  }
+  /*------------------*/
 
-            small {
-                display: none;
-            }
-        }
+  /*Socialmedia*/
+  .socialmedia {
+
+    .socialmediaimg {
+      display: inline-block;
+      width: 25px;
+      height: 25px;
+      margin-right: 10px;
     }
+
+    a:hover {
+      text-decoration: none;
+      color: orange;
+    }
+  }
+  /*------------------*/
+
+}
+/*--------------*/
+
+@media(min-width: 992px){
+
+  /*Footer*/
+  .footer {
+
+    /*General padding that pushes the content together*/
+    .address, .links, .posts, .socialmedia {
+      padding: 0 3% 0 7%;
+    }
+    /*------------------*/
+
+  }
+  /*------------------*/
 }

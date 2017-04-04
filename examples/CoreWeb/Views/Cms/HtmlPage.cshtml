@@ -1,0 +1,42 @@
+﻿@model CoreWeb.Models.HtmlPage
+@{
+    ViewBag.Title = Model.Title;
+}
+
+<div class="container">
+    <h1>@Model.Title</h1>
+
+    @if (!string.IsNullOrEmpty(Model.Intro.Value)) {
+        <p class="ingress">@Model.Intro.Value</p>
+    }
+
+    <div class="row">
+        <div class="col-sm-12"><h2>@Model.MainContent.Title.Value</h2></div>
+        <div class="col-sm-6"><p>@Model.MainContent.SubTitle.Value</p></div>
+        <div class="col-sm-6"><p>@Model.MainContent.Content.Value</p></div>
+    </div>
+
+    @Html.Raw(Model.Body.Value)
+
+    <form>
+        @if (!string.IsNullOrEmpty(Model.CustomForm.FirstLabel.Value)) {
+            <div class="form-group">
+                <label for="label1">@Model.CustomForm.FirstLabel.Value</label>
+                <input class="form-control" id="label1" placeholder="@Model.CustomForm.FirstLabel.Value" type="text">
+            </div>
+        }
+        @if (!string.IsNullOrEmpty(Model.CustomForm.SecondLabel.Value)) {
+            <div class="form-group">
+                <label for="label2">@Model.CustomForm.SecondLabel.Value</label>
+                <input class="form-control" id="label2" placeholder="@Model.CustomForm.SecondLabel.Value" type="text">
+            </div>
+        }
+        @if (!string.IsNullOrEmpty(Model.CustomForm.ThirdLabel.Value)) {
+            <div class="form-group">
+                <label for="label3">@Model.CustomForm.ThirdLabel.Value</label>
+                <input class="form-control" id="label3" placeholder="@Model.CustomForm.ThirdLabel.Value" type="text">
+            </div>
+        }
+    </form>
+
+</div>
