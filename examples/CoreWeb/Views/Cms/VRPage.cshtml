@@ -1,0 +1,28 @@
+@model CoreWeb.Models.VRPage
+@{
+    ViewBag.Title = Model.Title;
+}
+
+<main class="jumbotron">
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-xs-6 col-sm-offset-1 col-sm-5">
+        <h1>@Model.HeroContent.Heading.Value</h1>
+        <p>@Model.HeroContent.Content.Value</p>
+      </div>
+    </div>
+  </div>
+</main>
+
+<article class="container-fluid text-center article">
+  <div class="row">
+    <div class="col-xs-12">
+      <h2>@Model.ArticleContent.Heading.Value</h2>
+      <p>@Model.ArticleContent.Content.Value</p>
+    </div>
+  </div>
+</article>
+
+    @Html.Raw(Model.Body.Value)
+
+</div>

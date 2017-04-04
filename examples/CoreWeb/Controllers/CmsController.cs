@@ -77,5 +77,16 @@ namespace CoreWeb.Controllers
 
             return View(model);
         }
+
+        /// <summary>
+        /// Gets the page with the specified id.
+        /// </summary>
+        /// <param name="id">The unique id</param>
+        [Route("vrpage")]
+        public IActionResult VRPage(string id) {
+            var model = api.Pages.GetById<Models.VRPage>(id);
+
+            return View(model);
+        }
     }
 }
