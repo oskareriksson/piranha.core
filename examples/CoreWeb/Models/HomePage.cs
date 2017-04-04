@@ -17,7 +17,14 @@ namespace CoreWeb.Models
     [PageType(Title = "Home page", Route = "/homepage")]
     public class HomePage : Page<HomePage>
     {
-        public class ComplexRegion
+        public class JumbotronContent
+        {
+            [Field]
+            public StringField Heading { get; set; }
+            [Field]
+            public TextField Content { get; set; }
+        }
+        public class ArticleRegion
         {
             [Field]
             public StringField Heading { get; set; }
@@ -28,7 +35,9 @@ namespace CoreWeb.Models
         [Region]
         public HtmlField Body { get; set; }
         [Region]
-        public ComplexRegion SupportingText { get; set; }
+        public JumbotronContent HeroContent { get; set; }
+        [Region]
+        public ArticleRegion ArticleContent { get; set; }
 
     }
 }
