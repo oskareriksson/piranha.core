@@ -31,6 +31,21 @@ namespace CoreWeb.Models
             [Field]
             public TextField Content { get; set; }
         }
+        public class CaseRegion
+        {
+            [Field]
+            public StringField Case1 { get; set; }
+            [Field]
+            public StringField Case1Img { get; set; }
+            [Field]
+            public StringField Case2 { get; set; }
+            [Field]
+            public StringField Case2Img { get; set; }
+            [Field]
+            public StringField Case3 { get; set; }
+            [Field]
+            public StringField Case3Img { get; set; }
+        }
 
         [Region]
         public HtmlField Body { get; set; }
@@ -38,6 +53,8 @@ namespace CoreWeb.Models
         public JumbotronContent HeroContent { get; set; }
         [Region]
         public ArticleRegion ArticleContent { get; set; }
+        [Region]
+        public CaseRegion Cases { get; set; }
 
     }
 }

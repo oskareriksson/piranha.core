@@ -3,10 +3,10 @@
     ViewBag.Title = Model.Title;
 }
 
-<main class="jumbotron">
+<main class="jumbotron text-center">
   <div class="container-fluid">
     <div class="row">
-      <div class="col-xs-6 col-sm-offset-1 col-sm-5">
+      <div class="col-xs-12">
         <h1>@Model.HeroContent.Heading.Value</h1>
         <p>@Model.HeroContent.Content.Value</p>
       </div>
@@ -19,6 +19,23 @@
     <div class="col-xs-12">
       <h2>@Model.ArticleContent.Heading.Value</h2>
       <p>@Model.ArticleContent.Content.Value</p>
+    </div>
+  </div>
+</article>
+
+<article class="container-fluid cases">
+  <div class="row">
+    <div class="col-xs-4 text-center">
+      <h3>@Model.Cases.Case1.Value</h3>
+      <img src="@Model.Cases.Case1Img.Value" alt="Case 1 Image">
+    </div>
+    <div class="col-xs-4 text-center">
+      <h3>@Model.Cases.Case2.Value</h3>
+      <img src="@Model.Cases.Case2Img.Value" alt="Case 2 Image">
+    </div>
+    <div class="col-xs-4 text-center">
+      <h3>@Model.Cases.Case3.Value</h3>
+      <img src="@Model.Cases.Case3Img.Value" alt="Case 3 Image">
     </div>
   </div>
 </article>
