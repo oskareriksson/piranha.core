@@ -55,17 +55,6 @@ namespace CoreWeb.Controllers
 
             return View(model);
         }
-        
-        /// <summary>
-        /// Gets the page with the specified id.
-        /// </summary>
-        /// <param name="id">The unique id</param>
-        [Route("aboutpage")]
-        public IActionResult AboutPage(string id) {
-            var model = api.Pages.GetById<Models.AboutPage>(id);
-
-            return View(model);
-        }
 
         /// <summary>
         /// Gets the page with the specified id.

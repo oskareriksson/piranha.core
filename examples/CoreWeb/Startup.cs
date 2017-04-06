@@ -74,7 +74,6 @@ namespace CoreWeb
             var pageTypeBuilder = new Piranha.AttributeBuilder.PageTypeBuilder(api)
                 .AddType(typeof(Models.MarkdownPage))
                 .AddType(typeof(Models.HtmlPage))
-                .AddType(typeof(Models.AboutPage))
                 .AddType(typeof(Models.HomePage))
                 .AddType(typeof(Models.VRPage));
             pageTypeBuilder.Build();
