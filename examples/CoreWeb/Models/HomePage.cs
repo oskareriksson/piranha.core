@@ -30,10 +30,16 @@ namespace CoreWeb.Models
             public StringField Heading { get; set; }
             [Field]
             public TextField Content { get; set; }
+            [Field]
+            public StringField Image1 { get; set; }
+            [Field]
+            public StringField Image2 { get; set; }
+            [Field]
+            public StringField Image3 { get; set; }
+            [Field]
+            public StringField Image4 { get; set; }
         }
 
-        [Region]
-        public HtmlField Body { get; set; }
         [Region]
         public JumbotronContent HeroContent { get; set; }
         [Region]
