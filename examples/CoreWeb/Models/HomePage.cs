@@ -39,7 +39,9 @@ namespace CoreWeb.Models
             [Field]
             public StringField Image4 { get; set; }
         }
-
+        
+        [Region]
+        public HtmlField Body { get; set; }
         [Region]
         public JumbotronContent HeroContent { get; set; }
         [Region]
