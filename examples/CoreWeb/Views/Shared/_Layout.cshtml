@@ -1,4 +1,8 @@
-﻿<!DOCTYPE html>
+﻿@inject Piranha.Api Api
+@{
+  var sitemap = Api.Sites.GetSitemap();
+}
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="utf-8">
@@ -41,6 +45,23 @@
     <!-- Collect the nav links, forms, and other content for toggling -->
     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
       <ul class="nav navbar-nav navbar-right">
+        @foreach (var item in sitemap) {
+          <li @(item.Items.Count > 0 ? "class=dropdown" : "")>
+            @if (item.Items.Count > 0) {
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">@item.Title<span class="caret"></span></a>              
+              <ul class="dropdown-menu">
+                <a href="@item.Permalink">@item.Title</a>
+                @foreach (var subitem in item.Items) {
+                  <li><a href="@subitem.Permalink">@subitem.Title</a></li>
+                }
+              </ul>
+            } else {
+              <a href="@item.Permalink">@item.Title</a>
+            }
+          </li>
+        }
+
+        <!--
         <li><a href="http://localhost:5000/oculus-rift">Oculus</a></li>
         <li><a href="http://localhost:5000/htc-vive">Vive</a></li>
         <li><a href="http://localhost:5000/samsung-gear">Gear</a></li>
@@ -55,6 +76,7 @@
             <li><a href="#">Additional Media</a></li>
           </ul>
         </li>
+        -->
       </ul>
     </div><!-- /.navbar-collapse -->
   </div><!-- /.container-fluid -->
