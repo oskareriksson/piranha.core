@@ -33,11 +33,19 @@ namespace CoreWeb.Models
             [Field]
             public StringField Image1 { get; set; }
             [Field]
+            public StringField Image1Title { get; set; }
+            [Field]
             public StringField Image2 { get; set; }
+            [Field]
+            public StringField Image2Title { get; set; }
             [Field]
             public StringField Image3 { get; set; }
             [Field]
+            public StringField Image3Title { get; set; }
+            [Field]
             public StringField Image4 { get; set; }
+            [Field]
+            public StringField Image4Title { get; set; }
         }
         
         [Region]
