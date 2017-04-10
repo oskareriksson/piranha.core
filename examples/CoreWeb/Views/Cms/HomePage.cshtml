@@ -17,24 +17,48 @@
 <article class="container-fluid text-center article">
   <div class="row">
     <div class="col-xs-12">
-      <h2>@Model.ArticleContent.Heading.Value</h2>
+      <h4>@Model.ArticleContent.Heading.Value</h4>
       <p>@Model.ArticleContent.Content.Value</p>
     </div>
     <div class="col-xs-offset-1 col-xs-4 col-sm-offset-0 col-sm-3 tn-container">
-      <img src="@Model.ArticleContent.Image1.Value" alt="Image 1" class="tn">
-      <p>Oculus</p>
+      <div class="aspectratio">
+        <div class="contentstretch">
+          <a href="http://localhost:5000/oculus-rift">
+            <img src="@Model.ArticleContent.Image1.Value" alt="Image 2" class="img-responsive">
+            <h4>@Model.ArticleContent.Image1Title.Value</h4>
+          </a>
+        </div>
+      </div>
     </div>
     <div class="col-xs-offset-2 col-xs-4 col-sm-offset-0 col-sm-3 tn-container">
-      <img src="@Model.ArticleContent.Image2.Value" alt="Image 2" class="tn">
-      <p>Vive</p>
+      <div class="aspectratio">
+        <div class="contentstretch">
+          <a href="http://localhost:5000/htc-vive">
+            <img src="@Model.ArticleContent.Image2.Value" alt="Image 2" class="img-responsive">
+            <h4>@Model.ArticleContent.Image2Title.Value</h4>
+          </a>
+        </div>
+      </div>
     </div>
     <div class="col-xs-offset-1 col-xs-4 col-sm-offset-0 col-sm-3 tn-container">
-      <img src="@Model.ArticleContent.Image3.Value" alt="Image 3" class="tn">
-      <p>Gear</p>
+      <div class="aspectratio">
+        <div class="contentstretch">
+          <a href="http://localhost:5000/samsung-gear">
+            <img src="@Model.ArticleContent.Image3.Value" alt="Image 3" class="img-responsive">
+            <h4>@Model.ArticleContent.Image3Title.Value</h4>
+          </a>
+        </div>
+      </div>
     </div>
     <div class="col-xs-offset-2 col-xs-4 col-sm-offset-0 col-sm-3 tn-container">
-      <img src="@Model.ArticleContent.Image4.Value" alt="Image 4" class="tn">
-      <p>Augmented</p>
+      <div class="aspectratio">
+        <div class="contentstretch">
+          <a href="http://localhost:5000/augmented-reality">
+            <img src="@Model.ArticleContent.Image4.Value" alt="Image 4" class="img-responsive">
+            <h4>@Model.ArticleContent.Image4Title.Value</h4>
+          </a>
+        </div>
+      </div>
     </div>
   </div>
 </article>
