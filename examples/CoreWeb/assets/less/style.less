@@ -111,6 +111,7 @@
           color: #000;
 
           img {
+            /*Set the height to 80% of parent size. Stretches image a bit, but makes containers equal size and repsonsive*/
             height: 80%;
             /*Vertically aligns the image in the remaining container space*/
             position: relative;
@@ -120,6 +121,7 @@
           }
 
           h4 {
+            /*Margin set to the rest of container size. In this case 10% above and below the image*/
             margin-top: 10%;
           }
         }
@@ -212,20 +214,23 @@
 @media(min-width: 768px){
   .article {
 
-    .tn-container {
+    .row{
 
-      .aspectratio {
+      .tn-container {
 
-        .contentstretch {
+        .aspectratio {
 
-          a {
+          .contentwrapper {
 
-            img {
-              height: 50%;
-            }
+            a {
 
-            h4 {
-              margin-top: 25%;
+              img {
+                height: 60%;
+              }
+
+              h4 {
+                margin-top: 20%;
+              }
             }
           }
         }
