@@ -29,9 +29,17 @@ namespace CoreWeb.Models
         public class ArticleRegion
         {
             [Field]
-            public StringField Heading { get; set; }
+            public StringField Heading1 { get; set; }
             [Field]
-            public TextField Content { get; set; }
+            public TextField Content1 { get; set; }
+            [Field]
+            public StringField Heading2 { get; set; }
+            [Field]
+            public TextField Content2 { get; set; }
+            [Field]
+            public StringField Heading3 { get; set; }
+            [Field]
+            public TextField Content3 { get; set; }
         }
         public class CaseRegion
         {
