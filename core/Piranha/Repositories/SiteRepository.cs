@@ -74,7 +74,7 @@ namespace Piranha.Repositories
         /// <param name="onlyPublished">If only published items should be included</param>
         /// <param name="transaction">The optional transaction</param>
         /// <returns>The sitemap</returns>
-        public IList<Models.SitemapItem> GetSitemap(string id = null, bool onlyPublished = true, IDbTransaction transaction = null) {
+        public Models.Sitemap GetSitemap(string id = null, bool onlyPublished = true, IDbTransaction transaction = null) {
             if (id == null) {
                 var site = GetDefault(transaction);
 
@@ -83,7 +83,7 @@ namespace Piranha.Repositories
             }
 
             if (id != null) {
-                var pages = conn.Query<Page>("SELECT [Id], [ParentId], [SortOrder], [Title], [NavigationTitle], [Slug], [Published], [Created], [LastModified] FROM [Piranha_Pages] WHERE [SiteId]=@Id ORDER BY [ParentId], [SortOrder]",
+                var pages = conn.Query<Page>("SELECT [Id], [ParentId], [SortOrder], [Title], [NavigationTitle], [Slug], [IsHidden], [Published], [Created], [LastModified] FROM [Piranha_Pages] WHERE [SiteId]=@Id ORDER BY [ParentId], [SortOrder]",
                     new { Id = id }, transaction: transaction);
 
                 if (onlyPublished)
@@ -149,20 +149,13 @@ namespace Piranha.Repositories
         /// <param name="pages">The full page list</param>
         /// <param name="parentId">The current parent id</param>
         /// <returns>The sitemap</returns>
-        private IList<Models.SitemapItem> Sort(IEnumerable<Page> pages, string parentId = null, int level = 0) {
-            var result = new List<Models.SitemapItem>();
+        private Models.Sitemap Sort(IEnumerable<Page> pages, string parentId = null, int level = 0) {
+            var result = new Models.Sitemap();
 
             foreach (var page in pages.Where(p => p.ParentId == parentId).OrderBy(p => p.SortOrder)) {
-                var item = new Models.SitemapItem() {
-                    Id = page.Id,
-                    Title = page.Title,
-                    NavigationTitle = page.NavigationTitle,
-                    Permalink = page.Slug,
-                    Level = level,
-                    Published = page.Published,
-                    Created = page.Created,
-                    LastModified = page.LastModified
-                };
+                var item = App.Mapper.Map<Page, Models.SitemapItem>(page);
+
+                item.Level = level;
                 item.Items = Sort(pages, page.Id, level + 1);
 
                 result.Add(item);
