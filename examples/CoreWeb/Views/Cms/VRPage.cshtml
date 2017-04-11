@@ -3,20 +3,17 @@
     ViewBag.Title = Model.Title;
 }
 
-<main class="jumbotron text-center">
-  <div class="container-fluid">
-    <div class="row">
-      <div class="col-xs-12">
-        <h1>@Model.HeroContent.Heading.Value</h1>
-        <p>@Model.HeroContent.Content.Value</p>
-      </div>
-    </div>
+<main class="main">
+  <div class="imagewrapper">
+    <img src="@Model.HeroContent.HeroImage.Value" alt="Hero Image" id="heroimage">
   </div>
 </main>
 
 <article class="container-fluid text-center article">
   <div class="row">
     <div class="col-xs-12">
+      <h1>@Model.HeroContent.Heading.Value</h1>
+      <p>@Model.HeroContent.Content.Value</p>
       <h2>@Model.ArticleContent.Heading.Value</h2>
       <p>@Model.ArticleContent.Content.Value</p>
     </div>

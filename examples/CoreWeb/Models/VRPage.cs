@@ -23,6 +23,8 @@ namespace CoreWeb.Models
             public StringField Heading { get; set; }
             [Field]
             public TextField Content { get; set; }
+            [Field]
+            public TextField HeroImage { get; set; }
         }
         public class ArticleRegion
         {
