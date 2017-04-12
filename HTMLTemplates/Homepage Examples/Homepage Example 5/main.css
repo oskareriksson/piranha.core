@@ -1,0 +1,161 @@
+/*Revealing Navbar*/
+
+html, body {
+  height: 100%;
+}
+
+.navbar-toggle {
+  float: left;
+  /*Keeps button from disappearing on larger viewports*/
+  display: block;
+  background-color: #555555;
+  border: none;
+}
+
+.canvas {
+  position: relative;
+  left: 0;
+  z-index: 2;
+  min-height: 100%;
+  padding: 50px 0 0 0;
+  background: #ddd;
+}
+
+#myNavmenu {
+  z-index: 1;
+  width: 200px;
+}
+
+/*Additional Navbar styling*/
+.navmenu-default .navmenu-nav li a:hover {
+  background-color: #ccc;
+}
+/*-------------------*/
+/*-------------------*/
+
+/*Hamburger Navbar*/
+
+.navbar-default {
+  background-color: #ddd;
+}
+
+.navbar-default .navbar-toggle .icon-bar {
+    background-color: #fff;
+}
+/*-------------------*/
+
+/*Jumbotron*/
+
+#jumbo1 {
+  color: white;
+  background-image: url("forest.jpg");
+  margin-bottom: 0;
+}
+/*-------------------*/
+
+/*Main*/
+main .row .col-sm-6 {
+  padding: 0;
+}
+
+main img {
+  padding: 10px;
+}
+/*-------------------*/
+
+/*Article*/
+
+#jumbo2 {
+  margin-bottom: 0;
+}
+
+/*-------------------*/
+
+/*Footer*/
+
+footer {
+  background-color:#0c1a1e;
+  min-height: 350px;
+}
+
+footer div .col-xs-12 {
+  margin-top: 40px;
+}
+
+footer ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+/*Footer Address*/
+
+.address p {
+  font-size: 0.9em;
+}
+.address address {
+  font-size: 0.9em;
+}
+/*------------------*/
+
+/*Footer Links*/
+
+footer {
+  color: white;
+}
+
+.links h4 {
+  padding-top: 14px;
+}
+
+.links ul {
+  padding-top: 2px;
+}
+
+footer ul li a:hover {
+  color: orange;
+  text-decoration: none;
+}
+/*------------------*/
+
+/*Footer Posts*/
+
+.posts p {
+  font-size: 0.9em;
+}
+/*------------------*/
+
+/*Footer Socialmedia*/
+.socialmedia img {
+  display: inline-block;
+  width: 25px;
+  height: 25px;
+  margin-right: 10px;
+}
+
+.socialmedia a:hover {
+  color: orange;
+  text-decoration: none;
+}
+/*------------------*/
+
+/*Footer Copyright*/
+#copyright {
+  background-color: #051115;
+  margin-top: 10px;
+  padding-top: 6px;
+}
+/*------------------*/
+
+@media(min-width:992px){
+  .posts h4 {
+    padding-top: 15px;
+  }
+
+  .socialmedia {
+    padding-top: 15px
+  }
+
+  #jumbo2 h2, #jumbo2 p {
+    padding-left: 25px;
+  }
+}

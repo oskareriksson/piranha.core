@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Bootstrap Footer Example 3</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+  <style type="text/css">
+
+  body {
+    color: white;
+  }
+
+  .footer {
+    background-color: #0c1a1e;
+    min-height: 350px;
+  }
+
+  .footer .address, .footer .links, .footer .posts, .footer .socialmedia {
+    margin-top: 40px;
+  }
+
+  .footer ul {
+    list-style-type: none;
+    padding: 0;
+    padding-top: 2px;
+  }
+
+  /*Footer Address and Footer Posts*/
+
+  .address, .posts p {
+    font-size: 0.9em;
+  }
+  /*------------------*/
+
+  /*Footer Links and Socialmedia*/
+
+  .links h4 {
+    padding-top: 14px;
+  }
+
+
+  .footer ul li a:hover, .socialmedia a:hover {
+    color: orange;
+    text-decoration: none;
+  }
+  /*------------------*/
+
+  .footer .address, .footer .links, .footer .posts, .footer .socialmedia {
+    padding: 0 10% 0 10%;
+  }
+
+  @media(min-width: 992px){
+    .footer .address, .footer .links, .footer .posts, .footer .socialmedia {
+      padding: 0 5% 0 5%;
+    }
+  }
+  </style>
+</head>
+<body>
+  <footer class="container-fluid footer">
+    <div class="row">
+      <div class="col-xs-12 col-sm-6 col-md-3 address">
+        <h3>Test</h3>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam porta auctor est ut viverra. In maximus tempor magna at mattis. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos.</p>
+        <address>
+          <strong>Lorem Ipsum Street 1</strong><br>
+          (123) 456 789<br>
+          loremipsum@ipsum.com<br>
+        </address>
+      </div>
+      <div class="col-xs-12 col-sm-6 col-md-3 links">
+        <h4>General Links</h4>
+        <ul>
+          <li><a href="#"> Career</a></li>
+          <li><a href="#"> Privacy Policy</a></li>
+          <li><a href="#"> Terms & Conditions</a></li>
+          <li><a href="#"> Client Gateway</a></li>
+          <li><a href="#"> Ranking</a></li>
+          <li><a href="#"> Case Studies</a></li>
+          <li><a href="#"> Frequently Ask Questions</a></li>
+        </ul>
+      </div>
+      <div class="clearfix visible-sm-block"></div>
+      <div class="col-xs-12 col-sm-6 col-md-3 posts">
+        <h4>Latest Post</h4>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam porta auctor est ut viverra. - 1/1-11</p>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam porta auctor est ut viverra. - 1/1-11</p>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam porta auctor est ut viverra. - 1/1-11</p>
+      </div>
+      <div class="col-xs-12 col-sm-6 col-md-3 socialmedia">
+        <h4><a href="#">Facebook</a></h4>
+        <h4><a href="#">Twitter</a></h4>
+        <h4><a href="#">Linkedin</a></h4>
+      </div>
+    </div>
+  </footer>
+
+<script
+  src="https://code.jquery.com/jquery-3.1.1.min.js"
+  integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8="
+  crossorigin="anonymous">
+</script>
+<script
+  src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"
+  integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa"
+  crossorigin="anonymous">
+</script>
+</body>
+</html>

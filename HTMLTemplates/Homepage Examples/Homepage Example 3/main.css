@@ -1,0 +1,120 @@
+/*Navbar*/
+.navbar-default {
+  background-color: darkgrey;
+}
+
+.navbar-default .navbar-nav li a, .navbar-default .navbar-nav li a:hover {
+  color: white;
+}
+
+.navbar-toggle {
+  float: none;
+  margin-right: 0px;
+  border: 2px solid transparent;
+}
+
+.navbar-default .navbar-toggle .icon-bar {
+  background-color: white;
+}
+
+nav {
+  text-align: center;
+}
+
+li {
+  display: inline-block;
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
+li:hover {
+  background-color: grey;
+}
+
+input[placeholder] {
+  text-align: center;
+}
+/*------------------*/
+
+/*Main*/
+
+  /*Jumbotron*/
+  .jumbo {
+    background-image: url("winter.jpg");
+    padding-top: 10px;
+    padding-bottom: 30px;
+    color: white;
+  }
+
+  #jumbo2 {
+    text-align: right;
+  }
+  /*------------------*/
+/*------------------*/
+
+/*Article*/
+article {
+  margin-bottom: 20px;
+}
+/*------------------*/
+
+/*Div Jumbotron*/
+#jumbo3 {
+  background-image: url(horizon.jpg);
+  padding-top: 10px;
+  padding-bottom: 30px;
+  color: white;
+}
+/*------------------*/
+
+/*Contact Form*/
+form {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+form textarea {
+  resize: none;
+}
+
+textarea[placeholder] {
+  text-align: center;
+}
+/*------------------*/
+
+/*Footer*/
+footer {
+  background-color: grey;
+  height: 110px;
+  text-align: center;
+  color: white;
+}
+
+footer img {
+  width: 25px;
+  height: 25px;
+  margin-right: 5px;
+  margin-top: 10px;
+}
+
+footer a:hover {
+  text-decoration: none;
+}
+
+footer address {
+  margin-top: 10px;
+  margin-bottom: 0;
+}
+/*------------------*/
+
+@media(min-width:768px){
+  .contactform {
+    max-width: 75%;
+  }
+}
+
+@media(min-width:992px){
+  .contactform{
+    max-width: 50%;
+  }
+}

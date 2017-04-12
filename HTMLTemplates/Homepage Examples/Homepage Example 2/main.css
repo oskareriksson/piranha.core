@@ -1,0 +1,54 @@
+/*Navbar*/
+
+#sidebar {
+  background-color: gray;
+  color: white;
+  height: 100%;
+  padding: 0;
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 75px;
+  z-index: 2;
+}
+
+#sidebar-nav {
+  margin-top: 25px;
+}
+
+.navbar-collapse {
+  padding: 0;
+  text-align: center;
+  border: none;
+  -webkit-box-shadow: none;
+  box-shadow: none;
+}
+
+#siderbar a, #sidebar span {
+  color: white;
+  white-space: nowrap;
+}
+
+.navbar-toggle {
+  background-color: #595656;
+}
+
+.navbar-toggle .icon-bar{
+  background-color: #fff;
+}
+
+/*----------------------*/
+
+main {
+  text-align: center;
+}
+
+@media(min-width:768px){
+  #sidebar .link-text {
+    visibility: hidden;
+  }
+
+  #sidebar:hover .link-text {
+    visibility: visible;
+  }
+}

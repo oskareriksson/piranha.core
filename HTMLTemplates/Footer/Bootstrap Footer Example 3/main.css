@@ -1,0 +1,51 @@
+body {
+  color: white;
+}
+
+footer {
+  background-color:#0c1a1e;
+  min-height: 350px;
+}
+
+footer div .col-xs-12 {
+  margin-top: 40px;
+}
+
+footer ul {
+  list-style-type: none;
+  padding: 0;
+  margin-left: 10px;
+}
+
+/*Footer Address*/
+
+.address p {
+  font-size: 0.9em;
+}
+.address address {
+  font-size: 0.9em;
+}
+/*------------------*/
+
+/*Footer Links*/
+
+.links h4 {
+  padding-top: 14px;
+}
+
+.links ul {
+  padding-top: 2px;
+}
+
+footer ul li a:hover {
+  color: orange;
+  text-decoration: none;
+}
+/*------------------*/
+
+/*Footer Posts*/
+
+.posts p {
+  font-size: 0.9em
+}
+/*------------------*/

@@ -1,0 +1,226 @@
+/*Body*/
+body {
+  color: #fff;
+}
+/*--------------*/
+
+/*Navbar*/
+.navbar {
+  margin: 0;
+  background-color: #383838;
+  border: none;
+  border-radius: 0;
+
+  /*Navbar Header*/
+  .navbar-header {
+
+    /*Navbar Toggle Button*/
+    .navbar-toggle {
+      border-color: orange;
+      float: left;
+      margin-left: 15px;
+
+      .icon-bar {
+        background-color: orange;
+      }
+
+      &:hover {
+        background-color: rgba(0, 0, 0, 0.1);
+      }
+    }
+  }
+
+  /*Navbar First Dropdown Container*/
+  .navbar-collapse {
+    border: none;
+  }
+
+  /*Navbar First UL Dropdown*/
+  .navbar-nav {
+    border: none;
+    padding: 0;
+
+    li {
+      
+      a {
+        color: orange;
+        -webkit-transition: background-color 0.2s;
+        transition: background-color 0.2s;
+
+        &:hover, &:focus {
+          background-color: #6e6e6e;
+          color: orange;
+        }
+      }
+    }
+
+    /*Navbar Nested UL Dropdown*/
+    .dropdown {
+
+      .dropdown-toggle {
+
+        &:focus {
+          color: orange;
+          background-color: #6e6e6e;
+        }
+      }
+
+      .dropdown-menu {
+
+        li {
+      
+          a {
+            color: orange;
+            padding-left: 15px;
+
+            &:hover, &:focus {
+              background-color: #6e6e6e;
+              color: orange;
+            }
+          }
+        }
+      }
+    }
+
+  }
+
+
+}
+/*--------------*/
+
+/*Main*/
+#mainjumbo {
+
+  /*Background Image*/
+  background: url("../img/vr/vr-img-2.jpeg") no-repeat;
+  -webkit-background-size: 100% auto;
+  -moz-background-size: 100% auto;
+  -o-background-size: 100% auto;
+  background-size: 100% auto;
+  min-height: 240px;
+  margin: 0;
+  padding-bottom: 0;
+  /*-----*/
+
+  p {
+    font-size: 1.4em;
+    margin: 0;
+  }
+
+}
+/*--------------*/
+
+/*Section*/
+.section {
+  background-color: #3e3c44;
+  -webkit-box-shadow: inset 0 20px 45px rgba(0, 0, 0, 0.3);
+  box-shadow: inset 0 20px 45px rgba(0, 0, 0, 0.3);
+
+  h1 {
+    margin-top: 0;
+  }
+
+  .vrlist {
+    background-color: #000;
+    max-width: 150px;
+    max-height: 150px;
+    border-radius: 10px;
+    padding: 10px;
+    margin: 10px auto;
+
+    a {
+      color: orange;
+      font-size: 22px;
+      line-height: 130px;
+
+      &:hover {
+        text-decoration: none;
+      }
+    }
+  }
+}
+/*--------------*/
+
+/*Footer*/
+.footer {
+  background-color: #0c1a1e;
+  min-height: 350px;
+
+  /*General padding that pushes the content together*/
+  .address, .links, .posts, .socialmedia {
+    padding: 0 10%;
+  }
+  /*------------------*/
+
+  /*General margin between sections*/
+  .address, .links, .posts, .socialmedia {
+    margin-top: 20px;
+  }
+  /*------------------*/
+
+  /*General fontsize for address and posts*/
+  .address, .posts p {
+    font-size: 0.9em;
+  }
+  /*------------------*/
+
+  /*Links*/
+  .links {
+
+    h4 {
+      padding-top: 14px;
+    }
+
+    ul {
+      list-style-type: none;
+      padding: 0;
+
+      li {
+        margin: 2px 0 0 0;
+
+        a {
+
+          &:hover {
+            text-decoration: none;
+            color: orange;
+          }
+        }
+      }
+    }
+  }
+  /*------------------*/
+
+  /*Socialmedia*/
+  .socialmedia {
+
+    .socialmediaimg {
+      display: inline-block;
+      width: 25px;
+      height: 25px;
+      margin-right: 10px;
+    }
+
+    a:hover {
+      text-decoration: none;
+      color: orange;
+    }
+  }
+  /*------------------*/
+
+}
+/*--------------*/
+
+@media(min-width: 992px){
+
+  /*Footer*/
+  .footer {
+
+    /*General padding that pushes the content together*/
+    .address, .links, .posts, .socialmedia {
+      padding: 0 3% 0 7%;
+    }
+    /*------------------*/
+
+  }
+  /*------------------*/
+}
