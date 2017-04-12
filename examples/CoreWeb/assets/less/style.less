@@ -96,6 +96,8 @@
   .imagewrapper {
 
     #heroimage {
+      /*Makes the hero image fill up the entire hero container. Will need additional tweaking later if the user
+      wants to upload images other than 700x300px and maintain aspect ratio*/
       width: 100%;
       height: auto;
     }
@@ -128,10 +130,11 @@
     /*Makes sure the nested images keep their aspect ratio within this wrapper*/
     .aspectratio {
       width: 100%;
+      /*Makes so that the div will always be as tall as it is wide, i.e square*/
       padding-bottom: 100%;
       position: relative;
 
-      /*Makes sure that the elements nested withing the aspect ratio wrapper doesnt stretch the div*/
+      /*Makes sure that the elements nested within the aspect ratio wrapper doesnt stretch the div*/
       .contentwrapper {
         position: absolute;
         top: 0;
@@ -144,7 +147,8 @@
           color: #fff;
 
           img {
-            /*Set the height to 80% of parent size. Stretches image a bit, but makes containers equal size and repsonsive*/
+            /*Sets the height to 80% of parent size. Stretches image a bit since the images have different resolutions, 
+            but makes containers equal size and repsonsive*/
             height: 80%;
             /*Vertically aligns the image in the remaining container space*/
             position: relative;
@@ -155,7 +159,7 @@
           }
 
           h4 {
-            /*Margin set to the rest of container size. In this case 10% above and below the image*/
+            /*Separates the text from the image a bit*/
             margin-top: 10%;
           }
         }
@@ -284,10 +288,13 @@
           a {
 
             img {
+              /*Lowers the forced image height from 80% to 60% in screens larger than 768px.
+              Makes the stretching of the images a bit less obvious.*/
               height: 60%;
             }
 
             h4 {
+              /*Separates text a bit more one larger devices*/
               margin-top: 20%;
             }
           }
